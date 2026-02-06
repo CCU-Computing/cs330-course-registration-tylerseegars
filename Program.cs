@@ -29,13 +29,13 @@ namespace cs330courses
             }
             Console.WriteLine("---------");
             
-            List<CourseOffering> theList3 = service.getCourseOfferingsBySemester("Fall 2020");
+            List<CourseOffering> theList3 = service.getCourseOfferingsBySemester("Fall 2020"); // this should throw an exception, there are no Fall 2020 courses
             foreach(CourseOffering c in theList3) {
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
             
-            List<CourseOffering> theList4 = service.getCourseOfferingsBySemesterAndDept("Fall 2020","CSCI");
+            List<CourseOffering> theList4 = service.getCourseOfferingsBySemesterAndDept("Fall 2020","CSCI"); // this should also throw an exception
             foreach(CourseOffering c in theList4) {
                 Console.WriteLine(c);
             }
