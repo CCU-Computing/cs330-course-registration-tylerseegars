@@ -9,7 +9,7 @@ namespace cs330courses
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            
+            Console.WriteLine("My name is Tyler");
             CourseServices service = new CourseServices();
 
             Console.WriteLine("---------");
