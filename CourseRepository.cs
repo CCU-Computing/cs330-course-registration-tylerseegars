@@ -18,28 +18,32 @@ namespace cs330_proj1
                 Name="ARTD 201",
                 Title="graphic design",
                 Credits=3.0,
-                Description="graphic design descr"
+                Description="graphic design descr",
+                Department="ARTS"
 
             };
             Course c2 = new Course() {
                 Name="ARTS 101",
                 Title="art studio",
                 Credits=3.0,
-                Description="studio descr"
+                Description="studio descr",
+                Department="ARTS"
 
             };
             Course c3 = new Course() {
                 Name="STAT 201",
                 Title="stats",
                 Credits=4.0,
-                Description="stats descr"
+                Description="stats descr",
+                Department="MATH"
 
             };
             Course c4 = new Course() {
                 Name="ENGL 302",
                 Title="Math as a Communication language",
                 Credits=4.0,
-                Description="communication descr"
+                Description="communication descr",
+                Department="ENGL"
 
             };
             Courses.Add(c1);
