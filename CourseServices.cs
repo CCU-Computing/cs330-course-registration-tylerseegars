@@ -64,7 +64,7 @@ namespace cs330_proj1
          }
          if (courseOfferingsBySemester==null)
          {
-            throw new Exception("No courses found.");
+            throw new Exception("No courses found."); 
          }
          return courseOfferingsBySemester;
       }
@@ -77,14 +77,14 @@ namespace cs330_proj1
 
          foreach(CourseOffering c in theOfferings)
          {
-            if (c.Semester.Equals(semsester) && c.Department.Equals(department))
+            if (c.Semester.Equals(semester) && c.Department.Equals(department))
             {
                courseOfferingsBySemesterAndDept.Add(c);
             }
          }
          if (courseOfferingsBySemesterAndDept==null)
          {
-            throw new Exception("No Courses Found");
+            throw new Exception("No Courses Found"); 
          }
          return courseOfferingsBySemesterAndDept;
       }
