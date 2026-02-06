@@ -13,7 +13,7 @@ namespace cs330courses
             CourseServices service = new CourseServices();
 
             Console.WriteLine("---------");
-            /*
+            
             List<CourseOffering> theList = service.getOfferingsByGoalIdAndSemester("CG2","Spring 2021");
             foreach(CourseOffering c in theList) {
                 Console.WriteLine(c);
@@ -22,26 +22,26 @@ namespace cs330courses
 
             
             // Make each of the next 6 sections of code work
-            */
+            
             List<Course> theList2 = service.getCourses();
             foreach(Course c in theList2) {
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
-            /*
-            List<CourseOffering> theList3 = service.getCourseOfferingsBySemester("Fall 2020");
+            
+            List<CourseOffering> theList3 = service.getCourseOfferingsBySemester("Fall 2020"); // this should throw an exception, there are no Fall 2020 courses
             foreach(CourseOffering c in theList3) {
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
             
-            List<CourseOffering> theList4 = service.getCourseOfferingsBySemesterAndDept("Fall 2020","CSCI");
+            List<CourseOffering> theList4 = service.getCourseOfferingsBySemesterAndDept("Fall 2020","CSCI"); // this should also throw an exception
             foreach(CourseOffering c in theList4) {
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
 
-            
+            /*
             List<Course> theList5 = service.getCoursesByGoalId("CG2");
             foreach(Course c in theList5) {
                 Console.WriteLine(c);

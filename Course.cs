@@ -9,6 +9,8 @@ namespace cs330_proj1
         public double Credits {get;set;}
         public string Description {get;set;}
 
+        public string Department {get;set;}
+
         public override String ToString() {
             return $"{Name}: {Title} ({Credits})\n{Description}\n";
 

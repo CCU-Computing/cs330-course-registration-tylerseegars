@@ -7,6 +7,7 @@ namespace cs330_proj1
         public Course TheCourse {get;set;}
         public string Semester {get;set;}
         public string Section {get;set;}
+        public string Department {get;set;}
    // public string Instructor {get;set;}
 
         public override String ToString() {

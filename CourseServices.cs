@@ -41,13 +41,13 @@ namespace cs330_proj1
 
         
         //Add more service functions here, as needed, for the project
+         
+        /* As a student, I want to see all available courses so that I know what my options are */
          public List<Course> getCourses() {
             List<Course> allCourses = repo.Courses;
 
             return allCourses;
          }
-        /* As a student, I want to see all available courses so that I know what my options are */
-         
         /* As a student, I want to see all course offerings by semester, so that I can choose from what's
            available to register for next semester */
          public List<CourseOffering> getCourseOfferingsBySemester(String semester)
@@ -64,13 +64,30 @@ namespace cs330_proj1
          }
          if (courseOfferingsBySemester==null)
          {
-            throw new Exception("No courses found.");
+            throw new Exception("No courses found."); 
          }
          return courseOfferingsBySemester;
       }
         /* As a student I want to see all course offerings by semester and department so that I can 
         choose major courses to register for */
+         public List<CourseOffering> getCourseOfferingsBySemesterAndDept(String semester, String department)
+      {
+         List<CourseOffering> theOfferings = repo.Offerings;
+         List<CourseOffering> courseOfferingsBySemesterAndDept = new List<CourseOffering>();
 
+         foreach(CourseOffering c in theOfferings)
+         {
+            if (c.Semester.Equals(semester) && c.Department.Equals(department))
+            {
+               courseOfferingsBySemesterAndDept.Add(c);
+            }
+         }
+         if (courseOfferingsBySemesterAndDept==null)
+         {
+            throw new Exception("No Courses Found"); 
+         }
+         return courseOfferingsBySemesterAndDept;
+      }
         /* As a student I want to see all courses that meet a core goal, so that I can plan out
            my courses over the next few semesters and choose core courses that make sense for me */
 
