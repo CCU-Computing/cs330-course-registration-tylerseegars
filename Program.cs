@@ -13,7 +13,7 @@ namespace cs330courses
             CourseServices service = new CourseServices();
 
             Console.WriteLine("---------");
-            /*
+            
             List<CourseOffering> theList = service.getOfferingsByGoalIdAndSemester("CG2","Spring 2021");
             foreach(CourseOffering c in theList) {
                 Console.WriteLine(c);
@@ -34,7 +34,7 @@ namespace cs330courses
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
-            */
+            
             List<CourseOffering> theList4 = service.getCourseOfferingsBySemesterAndDept("Spring 2021","ARTS"); // this should also throw an exception
             foreach(CourseOffering c in theList4) {
                 Console.WriteLine(c);
