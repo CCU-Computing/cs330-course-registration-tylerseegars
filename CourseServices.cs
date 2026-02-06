@@ -77,7 +77,7 @@ namespace cs330_proj1
 
          foreach(CourseOffering c in theOfferings)
          {
-            if (c.Semester.Equals(semester) && c.Department.Equals(department))
+            if (c.Semester.Equals(semester) && c.TheCourse.Department.Equals(department))
             {
                courseOfferingsBySemesterAndDept.Add(c);
             }

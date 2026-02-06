@@ -8,7 +8,6 @@ namespace cs330_proj1
         public string Title {get;set;}
         public double Credits {get;set;}
         public string Description {get;set;}
-
         public string Department {get;set;}
 
         public override String ToString() {
