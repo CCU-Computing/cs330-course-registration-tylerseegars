@@ -6,7 +6,7 @@ using Moq;
 using System.Linq;
 
 
-namespace courseproject.tests
+namespace CourseProject.Tests
 {
     public class CourseServicesTests
     {
@@ -38,7 +38,7 @@ namespace courseproject.tests
             var semester = "Spring 2021";
 
             // Act/Assert
-            Assert.Throws<Exception>(() => courseServices.GetOfferingsByGoalIdAndSemester(goalId, semester));
+            Assert.Throws<Exception>(() => courseServices.getOfferingsByGoalIdAndSemester(goalId, semester));
         }
 
 
@@ -80,7 +80,7 @@ namespace courseproject.tests
             var courseServices = new CourseServices(mockRepository.Object);
 
             //Act
-            var result = courseServices.GetOfferingsByGoalIdAndSemester(goalId, semester);
+            var result = courseServices.getOfferingsByGoalIdAndSemester(goalId, semester);
 
             // Assert
             var itemInList = Assert.Single(result);
