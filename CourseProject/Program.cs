@@ -13,7 +13,10 @@ namespace cs330courses
             CourseServices service = new CourseServices();
 
             Console.WriteLine("---------");
-            /*
+            
+            CourseRepository repo = new CourseRepository();
+            CourseServices service = new CourseServices(repo);
+
             List<CourseOffering> theList = service.getOfferingsByGoalIdAndSemester("CG2","Spring 2021");
             foreach(CourseOffering c in theList) {
                 Console.WriteLine(c);
@@ -28,20 +31,20 @@ namespace cs330courses
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
-            */
+            
             List<CourseOffering> theList3 = service.getCourseOfferingsBySemester("Spring 2022"); // this should throw an exception, there are no Fall 2020 courses
             foreach(CourseOffering c in theList3) {
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
-            /*
+            
             List<CourseOffering> theList4 = service.getCourseOfferingsBySemesterAndDept("Spring 2021","ARTS"); // this should also throw an exception
             foreach(CourseOffering c in theList4) {
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
 
-            /*
+            
             List<Course> theList5 = service.getCoursesByGoalId("CG2");
             foreach(Course c in theList5) {
                 Console.WriteLine(c);
@@ -59,7 +62,7 @@ namespace cs330courses
                 Console.WriteLine(c);
             }
             Console.WriteLine("---------");
-           */
+           
 
 
             

@@ -5,16 +5,21 @@ namespace cs330_proj1
 {
     public class CourseServices
     {
-        private CourseRepository repo = new CourseRepository();
+        //private CourseRepository _repo = new CourseRepository();
+         private readonly ICourseRepository _repo;
 
+         public CourseServices(ICourseRepository courseRepo)
+         {
+            _repo=courseRepo;
+         }
 
         //As a student, I want to search for course offerings that meet core goals 
         // so that I can register easily for courses that meet my program requirements
          public List<CourseOffering> getOfferingsByGoalIdAndSemester(String theGoalId, String semester) {
           //finish this method during the tutorial 
-          //use the repo to get the data from the database (data store)
-            List<CoreGoal> theGoals = repo.Goals;
-            List<CourseOffering> theOfferings = repo.Offerings;
+          //use the _repo to get the data from the database (data store)
+            List<CoreGoal> theGoals = _repo.Goals;
+            List<CourseOffering> theOfferings = _repo.Offerings;
             
             //Complete any other required functionality/business logic to satisfy the requirement
             CoreGoal theGoal=null;
@@ -44,7 +49,7 @@ namespace cs330_proj1
          
         /* As a student, I want to see all available courses so that I know what my options are */
          public List<Course> getCourses() {
-            List<Course> allCourses = repo.Courses;
+            List<Course> allCourses = _repo.Courses;
 
             return allCourses;
          }
@@ -52,7 +57,7 @@ namespace cs330_proj1
            available to register for next semester */
          public List<CourseOffering> getCourseOfferingsBySemester(String semester)
       {
-         List<CourseOffering> theOfferings = repo.Offerings;
+         List<CourseOffering> theOfferings = _repo.Offerings;
          List<CourseOffering> courseOfferingsBySemester = new List<CourseOffering>();
 
          foreach(CourseOffering c in theOfferings)
@@ -72,7 +77,7 @@ namespace cs330_proj1
         choose major courses to register for */
          public List<CourseOffering> getCourseOfferingsBySemesterAndDept(String semester, String department)
       {
-         List<CourseOffering> theOfferings = repo.Offerings;
+         List<CourseOffering> theOfferings = _repo.Offerings;
          List<CourseOffering> courseOfferingsBySemesterAndDept = new List<CourseOffering>();
 
          foreach(CourseOffering c in theOfferings)
