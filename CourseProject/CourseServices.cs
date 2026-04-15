@@ -67,7 +67,7 @@ namespace cs330_proj1
                courseOfferingsBySemester.Add(c);
             }
          }
-         if (courseOfferingsBySemester==null)
+         if (courseOfferingsBySemester.Count == 0)
          {
             throw new Exception("No courses found."); 
          }
@@ -87,7 +87,7 @@ namespace cs330_proj1
                courseOfferingsBySemesterAndDept.Add(c);
             }
          }
-         if (courseOfferingsBySemesterAndDept==null)
+         if (courseOfferingsBySemesterAndDept.Count==0)
          {
             throw new Exception("No Courses Found"); 
          }
